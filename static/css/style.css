@@ -1,0 +1,55 @@
+
+
+.carousel-item img{
+    object-fit:cover;
+    object-position:top;
+    height:60vh;
+    overflow:hidden;
+}
+html{
+    font-size:14px;
+}
+body{
+    font-family:'Noto Sans','sans-serif';
+}
+a{
+    text-decoration:none;
+}
+#container{
+    margin-top:100px;
+}
+.one{
+    font-weight:bold;
+    color:red;
+}
+.two{
+    font-weight:bold;
+    background-color: green;
+    color:white;
+    padding:2px;
+}
+.pic-box{
+    position:relative;
+}
+.hot{
+    background-color: orangered;
+    color:white;
+    width:70px;
+    text-align:center;
+    font-weight:bold;
+    display:inline;
+    border-radius:8px;
+    padding:7px;
+    position:absolute;
+    top:0;
+    right:5px;
+    z-index:10;
+}
+#pro{
+    position:absolute;
+    left:300px;
+}
+
+#color{
+    color:blueviolet;
+}

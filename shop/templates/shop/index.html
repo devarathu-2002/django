@@ -1,0 +1,35 @@
+{% extends 'shop/layouts/main.html' %}
+{% block title %}
+ShopKart | Home Page |Onlie Shopping
+{% endblock title %}
+
+{% block content %}
+{% include 'shop/inc/slider.html' %}
+
+<div class="container" id="container">
+    <div class="row">
+        <div class="col-12">
+            <h4 class="mb-3">Latest Offers</h4>
+            <hr style="border-color:#b8bfc2">
+        </div>
+      {% for item in products %}
+         <div class="col-md-4 col-lg-3">
+          <div class="card my-3">
+            <img src="{{ item.product_image.url }}" height="200px" width="200px"  class="card-image-top" alt="Categories">
+              <a href="{% url 'product_details' item.category.name item.name %}" >
+                <div class="card-body">
+                  <h5 class="card-title text-primary" id="color">{{item.name}}</h5>
+                  <p class="card-text">
+                     <span class="float-start one"><s>Rs. {{ item.original_price | stringformat:'d'}}</s> </span> 
+                     <span class="float-end two">Rs. {{item.selling_price | stringformat:'d' }}</span> 
+                  </p>
+                   
+                </div>
+              </a>
+          </div>
+       </div>
+     {% endfor %}
+    </div>
+    
+</div>
+{% endblock content %}
